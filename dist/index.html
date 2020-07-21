@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>COVID-19 Tracker App</title>
+  </head>
+
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-info">
+      <a class="navbar-brand text-white" href="#">
+        <i class="fas fa-virus"></i>
+        COVID-19 tracker app
+      </a>
+    </nav>
+    <div
+      class="container pt-5 d-flex justify-content-center align-items-center flex-column"
+    >
+      <h1>World Statistics</h1><span>Last updated: <span class="last-updated"></span></span>
+      <div class="card-deck mt-3">
+        <div
+          class="card text-white text-center bg-warning mb-3"
+          style="max-width: 18rem;"
+        >
+          <h5 class="card-header">Currently infected</h5>
+          <div class="card-body">
+            <h5 class="card-title infected-number"></h5>
+            <p class="card-text "></p>
+          </div>
+        </div>
+        <div
+          class="card text-white text-center bg-danger mb-3"
+          style="max-width: 18rem;"
+        >
+          <h5 class="card-header">Death <br> cases</h5>
+          <div class="card-body">
+            <h5 class="card-title death-number"></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <div
+          class="card text-white text-center bg-success mb-3"
+          style="max-width: 18rem;"
+        >
+          <h5 class="card-header">Recovery cases</h5>
+          <div class="card-body">
+            <h5 class="card-title recovery-number"></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-5">
+      <h2 class="text-center">View Statistics by country</h2>
+      <select class="form-control country-dropdown">
+        <option value="" selected disabled hidden>Please select country...</option>
+        <option>USA</option>
+        <option>Spain</option>
+        <option>Russia</option>
+        <option>UK</option>
+        <option>Italy</option>
+        <option>Brazil</option>
+        <option>France</option>
+      </select>
+      <div class="row stats">
+        <div class="col-md-3">
+          <div class="card mt-3">
+            <img
+              class="card-img-top flag"
+              src=""
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title"><span class="country-name">Country</span> statistics</h5>
+              <p class="card-text">
+                <small class="text-muted"></small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+            .<div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Total cases</h4>
+                        <p class="card-text lead country-total-cases"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Total deaths</h4>
+                        <p class="card-text lead country-total-deaths"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Total recovered</h4>
+                        <p class="card-text lead country-total-recovered"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Active cases</h4>
+                        <p class="card-text lead country-active-cases"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
